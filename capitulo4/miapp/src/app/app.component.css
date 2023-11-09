@@ -1,0 +1,18 @@
+table{
+    table-layout: fixed;
+    width: 80%;
+    border: 3.2px solid purple;
+    border-collapse: collapse;
+}
+th,td{
+    padding: 1px;
+    letter-spacing: 2px;
+    text-align: center;
+    border: 2px solid blueviolet;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+}
+
+.container1{
+    margin-left: 15%;
+}
