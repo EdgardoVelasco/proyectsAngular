@@ -1,0 +1,59 @@
+<br><br>
+<div class="container container1">
+    <h2>App Vocales</h2> <br><br>
+    <table class="table">
+        <tr>
+            <td> <!--columna1-->
+                <input class="form-control entrada" placeholder="nombre" #box (keyup)="onChangeValue(box.value)"><br><br>
+                <button class="btn btn-primary" type="button">Insertar</button><br><br>
+
+                <div class="container-sm">
+                  <div *ngIf="condicion(); then bloqueV else bloqueF"></div>
+
+                  <ng-template #bloqueV>
+                    <h3>{{data}} comienza con una vocal!!!</h3>
+                  </ng-template>
+
+
+                  <ng-template #bloqueF>
+                    <h3>{{data}} no comienza con una vocal!!!</h3>
+                  </ng-template>
+
+                </div>
+
+            </td><!--fin columna1-->
+
+            <td><!--columna2-->
+                <!--vocales-->
+             <div class="container-sm">
+                <table class="table table-bordered format-table">
+                    <thead>
+                        <tr>
+                            <th>Vocales</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>dato Prueba</td></tr>
+                    </tbody>
+                </table>
+              </div>
+            </td><!--fin columna2-->
+
+            <td> <!--columna3-->
+                <!--No Vocales-->
+              <div class="container-sm">
+                <table class="table table-bordered format-table">
+                    <thead>
+                        <tr>
+                            <th>No Vocales</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>dato Prueba</td></tr>
+                    </tbody>
+                </table>
+              </div>
+            </td><!--fin columna3-->
+        </tr>
+    </table>
+</div>

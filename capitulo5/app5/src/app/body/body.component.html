@@ -1,1 +1,14 @@
-<p>body works!</p>
+<br>
+<br>
+<div class="container centrar">
+    <h1>Contador</h1>
+    <br>
+    <div class="container-sm">
+        <h2>{{numero}}</h2>
+        <input type="number" placeholder="número" #box (keyup)="onChangeValue(box.value)">
+        <br><br>
+        <button class="btn btn-success separar" type="button" (click)="decremento()">decremento</button>
+        <button class="btn btn-success separar" type="button" (click)="incremento()">incremento</button>
+    </div>
+</div>
+
