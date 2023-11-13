@@ -5,7 +5,7 @@
         <tr>
             <td> <!--columna1-->
                 <input class="form-control entrada" placeholder="nombre" #box (keyup)="onChangeValue(box.value)"><br><br>
-                <button class="btn btn-primary" type="button">Insertar</button><br><br>
+                <button class="btn btn-primary" type="button" (click)="insertar()">Insertar</button><br><br>
 
                 <div class="container-sm">
                   <div *ngIf="condicion(); then bloqueV else bloqueF"></div>
@@ -33,7 +33,9 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td>dato Prueba</td></tr>
+                        <tr *ngFor="let item of vocales">
+                            <td>{{item}}</td>
+                        </tr>
                     </tbody>
                 </table>
               </div>
@@ -49,7 +51,9 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td>dato Prueba</td></tr>
+                        <tr *ngFor="let item of noVocales">
+                            <td>{{item}}</td>
+                        </tr>
                     </tbody>
                 </table>
               </div>
