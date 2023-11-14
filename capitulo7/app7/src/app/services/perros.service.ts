@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, filter, map, timeout } from 'rxjs';
+import { Observable, map, timeout } from 'rxjs';
 import { Perro } from './clases';
 
 @Injectable({

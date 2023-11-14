@@ -15,14 +15,14 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
+                <tr *ngFor="let item of perros; index as i">
+                    <td>{{i+1}}</td>
                     <td>
-                        <img src="https://images.saymedia-content.com/.image/t_share/MTk2NzIzMTQ2NzMxMTAzMjUw/11-dogs-like-german-shepherd.png" width="150px">
+                        <img src={{item.urlImage}} width="150px">
                     </td>
-                    <td>Chicharrón</td>
-                    <td>prueba de descripción</td>
-                    <td>21 años</td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.description}}</td>
+                    <td>{{item.maxLife}}</td>
                 </tr>
             </tbody>
         </table>
