@@ -10,11 +10,17 @@ export class AppComponent {
   nombre:string;
   apellido:string;
   titulo:string;
+  fecha?:Date;
 
   constructor(private service:Servicio1Service){
     this.nombre=this.service.nombre;
     this.apellido=this.service.apellido;
     this.titulo=this.service.titulo;
+
+    this.service.fecha.subscribe({
+      next: value=>{this.fecha=value;},
+      error: err=>{console.log("algo paso!!!"+err);}
+    });
   }
   
 }

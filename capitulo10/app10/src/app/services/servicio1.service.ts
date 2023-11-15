@@ -9,16 +9,16 @@ export class Servicio1Service {
   private _nombre:string="edgardo";
   private _apellido:string="velasco";
   private _fechaObservable:Observable<Date>;
-  
+
   constructor() { 
     this._fechaObservable=new Observable(
       observer=>{
         setInterval(()=>observer.next(new Date()), 1000);
       }
     );
-
   }
 
+  get fecha():Observable<Date>{return this._fechaObservable;}
   get titulo():string{return this._titulo;}
   get nombre():string{return this._nombre;}
   get apellido():string{return this._apellido;}
