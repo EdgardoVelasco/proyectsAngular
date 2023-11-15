@@ -6,17 +6,19 @@
 
 <br>
 <div class="container-sm bg-success" style="width: 500px;">
-  <form>
+  <form [formGroup]="formulario1" (ngSubmit)="onSubmit()">
     <div class="mb-3">
-      <input type="text" class="form-control"  placeholder="nombre">
+      <input type="text" class="form-control"  placeholder="nombre" formControlName="nombre">
+      <div *ngIf="nameErrors"><a style="color: aliceblue;">Nombre es requerido</a></div>
     </div>
 
     <div class="mb-3">
-     <input type="number" class="form-control"  placeholder="edad">
+     <input type="number" class="form-control"  placeholder="edad" formControlName="edad">
     </div>
 
     <div class="mb-3">
-      <input type="email" class="form-control"  placeholder="correo">
+      <input type="email" class="form-control"  placeholder="correo" formControlName="correo">
+      <div *ngIf="correoErrors"><a style="color: aliceblue;">Correo es requerido</a></div>
     </div>
 
     <button class="btn btn-primary" type="submit">Registrar</button>
